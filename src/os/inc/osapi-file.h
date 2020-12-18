@@ -28,7 +28,6 @@
 #include "osconfig.h"
 #include "common_types.h"
 
-
 /** @defgroup OSFileAccess OSAL File Access Option Defines
  * @{
  */

@@ -84,15 +84,14 @@
 #include "osapi-timebase.h"
 #include "osapi-timer.h"
 
-    /*
-     ******************************************************************************
-     * Items below here are internal OSAL-use definitions and are not part of the
-     * OSAL API
-     *****************************************************************************
-     */
+/*
+ ******************************************************************************
+ * Items below here are internal OSAL-use definitions and are not part of the
+ * OSAL API
+ *****************************************************************************
+ */
 
 #include "osapi-bsp.h"
-
 
 #ifdef __cplusplus
 }

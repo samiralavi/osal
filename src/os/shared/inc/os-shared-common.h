@@ -144,4 +144,4 @@ void OS_ApplicationShutdown_Impl(void);
  ------------------------------------------------------------------*/
 void OS_WaitForStateChange_Impl(osal_objtype_t objtype, uint32 attempts);
 
-#endif  /* OS_SHARED_COMMON_H  */
+#endif /* OS_SHARED_COMMON_H  */

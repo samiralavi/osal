@@ -45,4 +45,4 @@
 
 extern int OCS_errno;
 
-#endif  /*  OCS_ERRNO_H */
+#endif /*  OCS_ERRNO_H */

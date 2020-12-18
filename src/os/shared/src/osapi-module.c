@@ -46,7 +46,6 @@
  */
 #include "osapi-filesys.h"
 
-
 /*
  * Sanity checks on the user-supplied configuration
  * The relevent OS_MAX limit should be defined
@@ -112,7 +111,7 @@ int32 OS_SymbolLookup_Static(cpuaddr *SymbolAddress, const char *SymbolName, con
             break;
         }
         if (strcmp(StaticSym->Name, SymbolName) == 0 &&
-                (ModuleName == NULL || strcmp(StaticSym->Module, ModuleName) == 0))
+            (ModuleName == NULL || strcmp(StaticSym->Module, ModuleName) == 0))
         {
             /* found matching symbol */
             *SymbolAddress = (cpuaddr)StaticSym->Address;

@@ -31,7 +31,6 @@
 #define OS_CHK_ONLY 0 /**< Unused, API takes bool */
 #define OS_REPAIR   1 /**< Unused, API takes bool */
 
-
 /** @brief OSAL file system info */
 typedef struct
 {
@@ -267,6 +266,5 @@ int32 OS_TranslatePath(const char *VirtualPath, char *LocalPath);
  */
 int32 OS_GetFsInfo(os_fsinfo_t *filesys_info);
 /**@}*/
-
 
 #endif

@@ -207,4 +207,4 @@ bool  OS_FileSys_FindVirtMountPoint(void *ref, const OS_object_token_t *token, c
 int32 OS_FileSys_Initialize(char *address, const char *fsdevname, const char *fsvolname, size_t blocksize,
                             osal_blockcount_t numblocks, bool should_format);
 
-#endif  /* OS_SHARED_FILESYS_H  */
+#endif /* OS_SHARED_FILESYS_H  */

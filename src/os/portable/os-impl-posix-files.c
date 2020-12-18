@@ -212,7 +212,7 @@ int32 OS_FileChmod_Impl(const char *local_path, uint32 access)
         if (fd < 0)
         {
             return OS_ERROR;
-        }        
+        }
     }
 
     /*

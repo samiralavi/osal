@@ -35,7 +35,6 @@ typedef struct
     uint32 microsecs;
 } OS_time_t;
 
-
 /** @defgroup OSAPIClock OSAL Real Time Clock APIs
  * @{
  */

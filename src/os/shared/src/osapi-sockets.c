@@ -48,7 +48,6 @@
  */
 #include "osapi-select.h"
 
-
 /*
  * Global data for the API
  */
@@ -185,7 +184,8 @@ int32 OS_SocketBind(osal_id_t sock_id, const OS_SockAddr_t *Addr)
             /* Not a socket */
             return_code = OS_ERR_INCORRECT_OBJ_TYPE;
         }
-        else if (record->refcount != 0 || (stream->stream_state & (OS_STREAM_STATE_BOUND | OS_STREAM_STATE_CONNECTED)) != 0)
+        else if (record->refcount != 0 ||
+                 (stream->stream_state & (OS_STREAM_STATE_BOUND | OS_STREAM_STATE_CONNECTED)) != 0)
         {
             /* Socket must be neither bound nor connected */
             return_code = OS_ERR_INCORRECT_OBJ_STATE;

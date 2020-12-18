@@ -246,7 +246,7 @@ void TestOpenClose(void)
 ---------------------------------------------------------------------------------------*/
 void TestChmod(void)
 {
-    char      filename[OS_MAX_PATH_LEN];    
+    char      filename[OS_MAX_PATH_LEN];
     int32     status;
     osal_id_t fd;
 
@@ -260,39 +260,48 @@ void TestChmod(void)
 
     /*Testing Write Only */
     status = OS_chmod(filename, OS_WRITE_ONLY);
-    if(status != OS_ERR_NOT_IMPLEMENTED){
+    if (status != OS_ERR_NOT_IMPLEMENTED)
+    {
         UtAssert_True(status == OS_SUCCESS, "status after chmod = %d", (int)status);
         status = OS_OpenCreate(&fd, filename, OS_FILE_FLAG_NONE, OS_WRITE_ONLY);
         UtAssert_True(status >= OS_SUCCESS, "status after reopen = %d", (int)status);
         status = OS_close(fd);
         UtAssert_True(status == OS_SUCCESS, "status after close = %d", (int)status);
-    }else{
-         UtPrintf("OS_chmod not implemented for write only\n");
-    }   
+    }
+    else
+    {
+        UtPrintf("OS_chmod not implemented for write only\n");
+    }
 
     /*Testing Read Only */
     status = OS_chmod(filename, OS_READ_ONLY);
-    if(status != OS_ERR_NOT_IMPLEMENTED){
+    if (status != OS_ERR_NOT_IMPLEMENTED)
+    {
         UtAssert_True(status == OS_SUCCESS, "status after chmod = %d", (int)status);
         status = OS_OpenCreate(&fd, filename, OS_FILE_FLAG_NONE, OS_READ_ONLY);
         UtAssert_True(status >= OS_SUCCESS, "status after reopen = %d", (int)status);
         status = OS_close(fd);
-        UtAssert_True(status == OS_SUCCESS, "status after close = %d", (int)status); 
-    }else{
+        UtAssert_True(status == OS_SUCCESS, "status after close = %d", (int)status);
+    }
+    else
+    {
         UtPrintf("OS_chmod not implemented for read only\n");
-    }      
+    }
 
     /*Testing Read Write */
     status = OS_chmod(filename, OS_READ_WRITE);
-    if(status != OS_ERR_NOT_IMPLEMENTED){
+    if (status != OS_ERR_NOT_IMPLEMENTED)
+    {
         UtAssert_True(status == OS_SUCCESS, "status after chmod = %d", (int)status);
         status = OS_OpenCreate(&fd, filename, OS_FILE_FLAG_NONE, OS_READ_WRITE);
         UtAssert_True(status >= OS_SUCCESS, "status after reopen = %d", (int)status);
         status = OS_close(fd);
-        UtAssert_True(status == OS_SUCCESS, "status after close = %d", (int)status); 
-    }else{
+        UtAssert_True(status == OS_SUCCESS, "status after close = %d", (int)status);
+    }
+    else
+    {
         UtPrintf("OS_chmod not implemented for read write\n");
-    }   
+    }
 
     /*Removing the file */
     status = OS_remove(filename);

@@ -36,4 +36,4 @@
 
 #define errno OCS_errno
 
-#endif  /* OSAL_OVERRIDE_ERRNO_H */
+#endif /* OSAL_OVERRIDE_ERRNO_H */

@@ -190,7 +190,7 @@ void Test_OS_StaticSymbolLookup(void)
     UtAssert_True(actual == expected, "OS_ModuleLoad_Static(name=%s) (%ld) == OS_SUCCESS", "UT", (long)actual);
 
     expected = OS_ERROR;
-    actual = OS_SymbolLookup_Static(&addr, "UT_staticsym", "NoModuleMatch");
+    actual   = OS_SymbolLookup_Static(&addr, "UT_staticsym", "NoModuleMatch");
     UtAssert_True(actual == expected, "OS_SymbolLookup_Static(name=%s, NoModuleMatch) (%ld) == OS_ERROR", "Test_Func1",
                   (long)actual);
     UtAssert_True(addr == (cpuaddr)&Test_DummyFunc, "OS_SymbolLookup_Static(address=%lx) == %lx", (unsigned long)addr,
